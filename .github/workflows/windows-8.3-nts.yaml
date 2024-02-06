@@ -1,7 +1,7 @@
 on: workflow_dispatch
 jobs:
   run:
-    runs-on: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: [windows-latest]
     name: Setup PHP nts
     steps:
       - name: Setup PHP
