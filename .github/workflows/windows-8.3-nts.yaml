@@ -1,13 +1,10 @@
-on: workflow_dispatch
-jobs:
-  run:
-    runs-on: [windows-latest]
-    name: Setup PHP nts
-    steps:
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.3'
-          extensions: redis, xlswriter
-        env:
-          phpts: nts # specify ts or nts
+- name: Build the extension
+  uses: php/php-windows-builder/extension@v1
+  with:
+    extension-url: https://github.com/phpredis/phpredis
+    extension-ref: '6.0.2'
+    php-version: '8.3'
+    ts: nts
+    arch: x64
+    args: --enable-redis
+    libs: zlib
