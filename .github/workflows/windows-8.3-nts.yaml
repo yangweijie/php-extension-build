@@ -1,10 +1,10 @@
 - name: Build the extension
   uses: php/php-windows-builder/extension@v1
   with:
-    extension-url: https://github.com/phpredis/phpredis
-    extension-ref: '6.0.2'
+    extension-url: https://github.com/GmSSL/GmSSL-PHP
+    extension-ref: '1.1.0'
     php-version: '8.3'
     ts: nts
     arch: x64
-    args: --enable-redis
+    args: --enable-gmssl
     libs: zlib
